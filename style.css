@@ -1,0 +1,241 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00ff66;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-block-size: 100%;
+    display: grid;
+    place-content: center;
+  }
+  .h2-container h2 {
+    color: #ff00f6!important;
+  } 
+  #bgVideoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: hard-light;
+  }
+
+
+#bgVideoContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('backgroundvideo.mp4') no-repeat center center/cover;
+    z-index: -1;
+}
+
+header {
+  color: #ff00f6;
+  padding: 30px;
+  top: 20;
+  display: left;
+  justify-content: space-between; /* Added to separate header text and buttons */
+  align-items: center; /* Added for vertical alignment */
+  position: fixed;
+  padding: 10;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  position: fixed;
+}
+
+h1 {
+  text-align: left;
+  color: #ff00f6;
+  padding: 0px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  top: 20;
+  font-size: 40px;
+  z-index: 999; 
+  position: relative;
+  margin-top: 0;
+  position: fixed;
+}
+
+#gallery h4 {
+  color: white;
+  margin-bottom: 100px;
+  font-family: 'Lora', serif;
+  font-weight: 100;
+  margin-bottom: -0px;
+  overflow: hidden; /* Hide overflow to prevent flickering */
+  white-space: nowrap; /* Keep text in a single line */
+  animation: animateText 4s steps(60) infinite; /* Adjust duration and steps as needed */
+}
+
+@keyframes animateText {
+  from {
+    width: 0; /* Start with no width */
+  }
+  to {
+    width: auto; /* Expand to full width */
+  }
+}
+
+nav {
+  margin-right: 30px; /* Adjust spacing from the right */
+  text-align: right;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 30px;
+  text-align: right;
+}
+
+nav ul li a {
+  color: #ff00f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align: right;
+}
+
+nav ul li a:hover {
+  color: #00ff66;
+}
+
+/* Main Styles */
+main {
+  padding: 0px;
+  
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+  text-align: right;
+  color: #ff00f6;
+}
+
+.shadow-button-set {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right */
+  gap: 2.5vmin;
+  color: #ff00f6;
+  margin-bottom: 200px;
+
+  & > li {
+    display: inline-flex;
+    background: black; 
+  
+    &:hover,
+    &:focus-within {
+      background: #00ff66; 
+    }
+  
+    &:is(:hover, :focus-within) > button:not(:active) {
+      --distance: -10px;
+    }
+  }
+
+  & button {
+    appearance: none;
+    outline: none;
+    text-align: right;
+    font-size: 4vmin;
+    border: 2px solid #ff00f6;
+    background: transparent;
+    color: #ff00f6;
+    font-family: 'Lora', serif;
+    font-weight: 100;
+    
+
+    --distance: 0;
+    transform: translateX(var(--distance)) translateY(var(--distance));
+
+    @media (prefers-reduced-motion: no-preference) {
+      will-change: transform;
+      transition: transform 0.2s ease;
+    }
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#gallery h2 {
+  animation: slideRight 2s ease-in-out infinite alternate; /* Slower and smoother animation */
+  color: white; /* Playful pink color */
+  margin-bottom: 100px; /* Reduced margin for a cleaner look */
+  font-family: 'Lora', serif;
+  font-weight: 100;
+  margin-bottom: -0px
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px); /* Adjusted distance for a subtle effect */
+  }
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+}
+
+/* Footer Styles */
+footer {
+  color: #ff00f6;
+  position: fixed;
+  left: 30px;
+  bottom: 0;
+  padding: 10;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+
+@keyframes animateText {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}

@@ -1,0 +1,141 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0; /* Modified to 0 */
+    background-image: url("images/landing.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; /* Center the background image */
+    background-size: cover; /* Make the background image cover the entire body */
+  }
+  
+  /* Header Styles */
+  header {
+    color: #ff00f6; /* Added # symbol */
+    padding: 30px;
+  }
+  
+  h1 {
+    text-align: left;
+    color: #ff00f6;
+    padding: 0px;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 40px;
+    margin: 0; /* Modified to 0 */
+  }
+  
+  h2 {
+    text-align: left;
+    padding: 30px;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: lighter;
+    background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3));
+    background-blend-mode: multiply;
+    max-width: 35%; /* Added unit */
+  }
+  
+  h3,
+  h4,
+  p {
+    text-align: left;
+    padding: 30px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+  }
+  
+  h5 {
+    text-align: right;
+    padding: 30px;
+    font-weight: lighter;
+  }
+  
+  nav {
+    position: fixed; /* Changed to fixed */
+    top: 10; /* Adjust top value as needed */
+    margin: 20; /* Adjust top value as needed */
+    width: 100%; /* Added */
+    left: 30px; /* Added unit */
+    z-index: 1000; /* Added z-index */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 30px;
+    margin: 10; /* Modified to 0 */
+    text-align: right;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 30px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #00ff66;
+  }
+  
+  /* Main Styles */
+  main {
+    padding: 0px;
+  }
+  
+  .container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .images {
+    width: 100%;
+    height: auto;
+  }
+  
+  .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+  }
+  
+  .images img:hover {
+    transform: scale(1.1); /* Increase the size of the image on hover */
+  }
+  
+  @media (min-width: 640px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      grid-auto-flow: row dense;
+    }
+  
+    .imageFlex1,
+    .imageFlex2,
+    .imageFlex3 {
+      display: grid;
+      row-gap: 20px;
+    }
+  }
+  
+  /* Footer Styles */
+  footer {
+    color: white;
+    position: fixed;
+    left: 30px; /* Added unit */
+    bottom: 0;
+    padding: 0;
+  }
+  
